@@ -1,0 +1,508 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+/* header */
+.navbar-container{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    
+    position:fixed;
+    top:0;
+    width:100%;
+
+    padding:8px 30px;
+
+    gap:10px;
+
+    z-index:1000;
+
+    background:rgba(207,230,238,.82);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    transition:
+        background .4s ease,
+        box-shadow .4s ease,
+        padding .35s ease;
+}
+
+.navbar-container.scrolled{
+
+    background:rgba(207,230,238,.97);
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.12);
+
+    padding:5px 30px;
+
+}
+
+/* navbar kiri */
+.navbar-container .left-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.navbar-container .left-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+}
+
+/* navbar kanan */
+.navbar-container .right-navbar ul {
+    display: flex;
+    width: 830px; /* ini untuk mengecilkan gap sisi kanan */
+    margin-left: 100px;
+    padding: 0px;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 4rem;
+}
+
+.navbar-container .right-navbar ul li{
+    position: relative;
+}
+
+/* item */
+.right-navbar ul li a{
+
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+
+    text-decoration:none;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.right-navbar ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:2px;
+
+    background:#c61f3c;
+
+    transition:.35s ease;
+
+}
+
+.right-navbar ul li a:hover{
+
+    color:#c61f3c;
+
+}
+
+.right-navbar ul li a:hover::after{
+
+    width:100%;
+
+}
+
+.navbar-container .right-navbar ul li a:hover{
+
+    color:#c61f3c;
+    background-color: rgba(0, 0, 255, 0);
+
+}
+
+.navbar-container .right-navbar ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* content (isi) */
+
+.hero {
+    background-image: url('../asset/img/background homepage/background pegaf.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 243px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* overlay gelap */
+    z-index: 0;
+}
+
+.hero-text {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 80px;
+    position: relative;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+.hero-text .head {
+    margin-top: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text h1:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.hero-text h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+/* cerita kami */
+.info-terkini {
+    background-color: bisque;
+    margin-top: 0px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    z-index: 1;
+}
+
+.info-terkini h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+
+.info-terkini h2 .activity {
+    font-family: sans-serif;
+}
+
+.aktivitas-container h2 {
+    font-family: 'GFS Didot', serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.container-aktivitas-terkini {
+    background-color: bisque;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container-aktivitas-terkini .box-preview .dark-link {
+    color: black;
+    text-decoration: none;
+}
+
+.box-preview {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.box-preview img {
+    width: 350px;
+    height: 250px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.box-preview p {
+    width: 250px;
+    padding-top: 5px;
+    padding-left: 20px;
+    align-content: center;
+}
+
+.box-preview-judul {
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    height: 50px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.box-preview-credit {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: normal;
+    color: blueviolet;
+    width: 250px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+.more {
+
+    align-self: flex-end;
+    margin-top: 5px;
+    color: blue;
+    text-decoration: none;
+    font-weight: 500px;
+}
+
+.more:hover {
+    text-decoration: underline;
+    color: navy;
+}
+
+.more:visited {
+    color: purple;
+}
+
+/* buletin */
+.buletin {
+    font-family: 'Dancing Script', cursive;
+    background-color: whitesmoke;
+    margin-top: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    z-index: 1;
+}
+
+.buletin h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    color: darkviolet;
+}
+
+.container-buletin {
+    background-color: whitesmoke;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container-buletin .box-preview {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.container-buletin .box-preview img {
+    width: 250px;
+    height: 350px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container-buletin .box-preview p {
+    width: 250px;
+    padding-top: 5px;
+    padding-left: 20px;
+    align-content: center;
+}
+
+.container-buletin .box-preview-judul {
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    height: 50px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container-buletin .box-preview-credit {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: normal;
+    color: blueviolet;
+    width: 250px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+/* footer */
+.footer {
+    /* margin-top: 60px; */
+    background-color: #cfe6ee;
+    padding: 40px 50px 40px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 1000px;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-logo {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer-col {
+    width: 300px;
+    margin-right: 0px;
+    /* margin-top: 50px; */
+}
+
+.footer-col-2 {
+    width: 300px;
+    /* margin-top: 5px; */
+    margin-left: 110px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+
+/* social link */
+.social-link {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-link .follow-us {
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-link .card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.social-link .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+/* membuat tulisan ditampilkan diaatas gambar */
+.social-link .caption {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: blue;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+
+}
+
+.card:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.card:hover .caption {
+    top: -55px;
+    opacity: 1;
+}

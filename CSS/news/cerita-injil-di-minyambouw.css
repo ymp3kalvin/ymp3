@@ -1,0 +1,250 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+}
+
+/* header */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #cfe6ee;
+    padding: 15px 30px;
+    gap: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+/* navbar kiri */
+.navbar-container .left-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.navbar-container .left-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+}
+
+/* navbar tengah */
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    position: relative;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3 ease;
+}
+
+.social-link .label {
+    position: absolute;
+    bottom: -25px;
+    white-space: nowrap;
+
+    font-size: 9px;
+    color: bisque;
+    padding: 4px 8px;
+    border-radius: 6px;
+
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+
+    transition-duration: 0.6s;
+    transition: 0.3 ease, 0.3 ease;
+}
+
+.navbar-container .center-navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex: 1;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.center-navbar ul li a {
+    display: flex;
+    width: 20px; /* ini untuk mengecilkan gap sisi kanan */
+    height: 20px;
+    padding: 0px;
+    justify-content: center;
+    transform-origin: center;
+    transition: 1s ease, color 0.3s ease;
+    transition-duration: 600ms;
+}
+
+.social-link:hover {
+    transform: scale(1.5);
+}
+
+.social-link:hover .label {
+    background-color: blue;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* navbar kanan */
+.navbar-container .right-navbar ul {
+    display: flex;
+    width: 800px; /* ini untuk mengecilkan gap sisi kanan */
+    padding: 0px;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar-container .right-navbar ul li a {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3 ease;
+    transition-duration: 300ms;
+    position: relative;
+}
+
+.right-navbar ul li a:hover {
+    color: crimson;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+
+/* content (isi) */
+.content ul {
+    margin-top: 50px;
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    justify-content: space-between;
+}
+
+
+/* bread crumb (beranda > aktivitas > kegiatan > isi berita) */
+.breadcrumb {
+    background-color: aliceblue;
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslategrey;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #999;
+}
+
+.breadcrumb .active {
+    color: slategrey;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.news-1 {   
+    margin: 140px 115px;
+    border-radius: 10px;
+    width: 800px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.757);
+}
+
+.news-1 img {
+    border-radius: 10px;
+}
+
+.news-1 h3 {
+    padding-left: 50px;
+}
+
+.title-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-caption {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.news-1 p {
+    width: 700px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+
+.footer {
+    margin-top: 60px;
+    background-color: #f2f4f7;
+    padding: 40px 50px 40px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 1500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.footer-logo {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer-col {
+    width: 500px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}

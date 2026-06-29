@@ -1,0 +1,755 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+/* header */
+.navbar-container{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    position:fixed;
+    top:0;
+    width:100%;
+
+    padding:8px 30px;
+
+    gap:10px;
+
+    z-index:1000;
+
+    background:rgba(207,230,238,.82);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    transition:
+        background .4s ease,
+        box-shadow .4s ease,
+        padding .35s ease;
+}
+
+.navbar-container.scrolled{
+
+    background:rgba(207,230,238,.97);
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.12);
+
+    padding:5px 30px;
+
+}
+
+/* navbar kiri */
+.navbar-container .left-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.navbar-container .left-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+}
+
+/* navbar kanan */
+.navbar-container .right-navbar ul {
+    display: flex;
+    width: 830px; /* ini untuk mengecilkan gap sisi kanan */
+    margin-left: 100px;
+    padding: 0px;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 4rem;
+}
+
+.navbar-container .right-navbar ul li{
+    position: relative;
+}
+
+/* item */
+.right-navbar ul li a{
+
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+
+    text-decoration:none;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.right-navbar ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:2px;
+
+    background:#c61f3c;
+
+    transition:.35s ease;
+
+}
+
+.right-navbar ul li a:hover{
+
+    color:#c61f3c;
+
+}
+
+.right-navbar ul li a:hover::after{
+
+    width:100%;
+
+}
+
+.navbar-container .right-navbar ul li a:hover{
+
+    color:#c61f3c;
+    background-color: rgba(0, 0, 255, 0);
+
+}
+
+.navbar-container .right-navbar ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* content (isi) */
+.hero {
+    background-image: url('../asset/img/background homepage/1. Banner (tentang kami).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* overlay gelap */
+    z-index: 0;
+}
+
+.hero-text {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 80px;
+    position: relative;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+.hero-text .head {
+    margin-top: 0px;
+    font-family: 'Dancing Script';
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.hero-text h1:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.hero-text h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+/* visi misi */
+.visi-misi {
+    display: flex;
+    font-family: 'GFS Didot', serif;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 10%;
+    
+}
+
+.visi-misi .card {
+    flex: 1;
+    height: 200px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    transition: all 0.3s ease;
+}
+
+.visi-misi .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 36px rgba(0,0,0,0.15);
+}
+
+.visi-misi .card h2 {
+    font-family: 'GFS Didot', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.visi-misi .card p {
+    font-family: 'Playpen Sans', cursive;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* cerita kami */
+.our-stories {
+    background-image: url('../asset/img/background homepage/Background our stories.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.our-stories::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* overlay gelap */
+    z-index: 0;
+}
+
+.our-stories-text {
+    width: 100%;
+    padding-bottom: 80px;
+    position: relative;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+.our-stories-text h1 {
+    font-family: 'Dancing Script';
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+    line-height: 100px;
+    font-size: 100px;
+    font-weight: 900;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.our-stories .stories {
+    line-height: 1.5rem;
+}
+
+.our-stories-text p {
+    font-family: 'Times New Roman', cursive;
+    font-size: 1.2rem;
+    padding-left: 140px;
+    padding-right: 200px;
+    text-align: justify;
+}
+
+/* our services */
+.our-services {
+    padding-left: 70px ;
+    background-color: azure;
+    padding-bottom: 80px;
+}
+
+.our-services h1 {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkblue;
+    z-index: 1;
+    font-size: 3rem;
+}
+
+.our-services .bible-translation {
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 70px;
+}
+
+.bible-translation > summary {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script',cursive;
+    font-weight:bolder;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.bible-translation > summary::webkit-details-marker {
+    display: none;
+}
+
+.bible-translation > summary::after{
+    content: "▶";
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.bible-translation[open] > summary::after {
+    transform: rotate(90deg);
+}
+
+.bible-translation {
+    display: grid;
+    grid-template-rows: 0fr;
+    transform: grid-template-rows 0.35s ease;
+}
+
+.our-services .method {
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.method > summary {
+    font-size: 1.2rem;
+    font-family: 'Comic Sans',cursive;
+    font-weight:bolder;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.method > summary::webkit-details-marker {
+    display: none;
+}
+
+.method > summary::after {
+    content: "▶";
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.method[open] > summary::after {
+    transform: rotate(90deg);
+}
+
+.method {
+    display: grid;
+    grid-template-rows: 0fr;
+    transform: grid-template-rows 0.35s ease;
+}
+
+.method p {
+    text-align: justify;
+    padding-right: 200px;
+    padding-left: 25px;
+    line-height: 1.8rem;
+    padding-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.our-services .studies {
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 70px;
+}
+
+.studies summary {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script',cursive;
+    font-weight:bolder;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.studies summary::webkit-details-marker {
+    display: none;
+}
+
+.studies summary::after{
+    content: "▶";
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.studies[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.studies {
+    display: grid;
+    grid-template-rows: 0fr;
+    transform: grid-template-rows 0.35s ease;
+}
+
+.studies p {
+    padding-right: 200px;
+    padding-left: 25px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.our-services .missionary {
+    overflow: hidden;
+    border-radius: 10px;
+    padding-left: 70px;
+}
+
+.missionary summary {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script',cursive;
+    font-weight:bolder;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.missionary summary::webkit-details-marker {
+    display: none;
+}
+
+.missionary summary::after{
+    content: "▶";
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.missionary[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.missionary {
+    display: grid;
+    grid-template-rows: 0fr;
+    transform: grid-template-rows 0.35s ease;
+}
+
+.missionary p {
+    padding-right: 200px;
+    padding-left: 25px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/* nilai-nilai */
+.values {
+    /* background-image: url('../asset/img/background homepage/1. Banner (tentang kami).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-color: lightskyblue;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 120px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.values::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* overlay gelap */
+    z-index: 0;
+}
+
+.our-value-section .our-value-title {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+.our-value-section .our-value-icons {
+    display: flex;
+    gap: 100px;
+    justify-content: center;;
+    padding-bottom: 80px;
+}
+
+.our-value-section .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    border-radius: 50;
+}
+
+.our-value-section .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* membuat tulisan ditampilkan diaatas gambar */
+.our-value-section .caption {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: blueviolet;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+
+}
+
+.our-value-section .card:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.our-value-section .card:hover .caption {
+    top: -55px;
+    opacity: 1;
+}
+
+.our-value-section-2 .our-value-icons {
+    display: flex;
+    gap: 100px;
+    justify-content: center;;
+    padding-bottom: 80px;
+}
+
+.our-value-section-2 .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    border-radius: 50;
+}
+
+.our-value-section-2 .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* membuat tulisan ditampilkan diaatas gambar */
+.our-value-section-2 .caption {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: blueviolet;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+
+}
+
+.our-value-section-2 .card:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.our-value-section-2 .card:hover .caption {
+    top: -55px;
+    opacity: 1;
+}
+
+/* footer */
+.footer {
+    /* margin-top: 60px; */
+    background-color: #cfe6ee;
+    padding: 40px 50px 40px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 1000px;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-logo {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer-col {
+    width: 300px;
+    margin-right: 0px;
+    /* margin-top: 50px; */
+}
+
+.footer-col-2 {
+    width: 300px;
+    /* margin-top: 5px; */
+    margin-left: 110px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+
+/* social link */
+.social-link {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-link .follow-us {
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-link .card {
+    position: relative;
+    flex-direction: row;
+    gap: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.social-link .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+
+/* membuat tulisan ditampilkan diaatas gambar */
+.social-link .caption {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: blue;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+
+}
+
+
+.social-link .card:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.social-link .card:hover .caption {
+    top: -55px;
+    opacity: 1;
+}
+
